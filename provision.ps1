@@ -22,5 +22,3 @@ $java_executable = Get-Command java | Select-Object -ExpandProperty Definition
 netsh firewall add allowedprogram program=$java_executable name="Java(TM) Platform SE Binary" mode=ENABLE
 
 Unzip "$($scriptDir)\IEDriverServer_Win32_2.46.0.zip" "C:\Windows\system32" $true
-
-Start-Process java.exe -ArgumentList "-jar `"$($scriptDir)\selenium-server-standalone-2.47.1.jar`""
