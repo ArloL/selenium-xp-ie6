@@ -1,9 +1,9 @@
-. .\Get-EnvironmentVariable.ps1
-. .\Get-EnvironmentVariableNames.ps1
-. .\Update-SessionEnvironment.ps1
-. .\Unzip.ps1
-
 $scriptDir = Split-Path -parent $MyInvocation.MyCommand.Path
+
+. $scriptDir\Get-EnvironmentVariable.ps1
+. $scriptDir\Get-EnvironmentVariableNames.ps1
+. $scriptDir\Update-SessionEnvironment.ps1
+. $scriptDir\Unzip.ps1
 
 $java_architecture = "x64"
 $driver_architecture = "x64"
