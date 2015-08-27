@@ -1,3 +1,5 @@
+$scriptDir = Split-Path -parent $MyInvocation.MyCommand.Path
+
 $java_architecture = "x64"
 if ([IntPtr]::size -eq 4) {
     $java_architecture = "i586"
