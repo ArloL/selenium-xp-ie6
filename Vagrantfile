@@ -11,6 +11,9 @@ Vagrant.configure(2) do |config|
     vb.gui = true
   end
 
-  config.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision.ps1"
+  config.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-java.ps1"
+  config.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-iedriverserver.ps1"
+  config.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-selenium.ps1"
+  config.vm.provision "shell", inline: "Restart-Computer"
 
 end
