@@ -15,6 +15,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-java.ps1"
   config.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-iedriverserver.ps1"
   config.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-selenium.ps1"
+  config.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-selenium-hub.ps1"
   config.vm.provision "shell", inline: "Restart-Computer"
 
 end
