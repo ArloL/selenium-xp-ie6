@@ -12,8 +12,8 @@ shasum --check IEDriverServer_Win32_2.47.0.zip.sha1
 wget -N http://selenium-release.storage.googleapis.com/2.46/IEDriverServer_Win32_2.46.0.zip
 shasum --check IEDriverServer_Win32_2.46.0.zip.sha1
 
-wget -N --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jre-8u60-windows-i586.exe
+wget -N --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jre-8u60-windows-i586.exe
 shasum --check jre-8u60-windows-i586.exe.sha1
 
-wget -N --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jre-8u60-windows-x64.exe
+wget -N --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jre-8u60-windows-x64.exe
 shasum --check jre-8u60-windows-x64.exe.sha1
