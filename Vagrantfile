@@ -11,6 +11,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "shell", path: "provision-timezone.bat"
   config.vm.provision "shell", path: "provision-screensaver.bat"
+  config.vm.provision "shell", path: "provision-balloon-tips.bat"
   config.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-java.ps1"
   config.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-iedriverserver.ps1"
   config.vm.provision "shell", path: "provision-selenium.ps1"
