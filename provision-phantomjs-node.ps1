@@ -8,9 +8,4 @@ C:\opt\phantomjs-2.0.0-windows\bin\phantomjs.exe --webdriver=8080 --webdriver-se
 $bat = $bat.Replace("{hubIp}", $hubIp)
 $bat = $bat.Replace("{bindIp}", $bindIp)
 
-$startupFolder = "$($env:ALLUSERSPROFILE)\Start Menu\Programs\Startup"
-if (!(Test-Path $startupFolder)) {
-    $startupFolder = "$($env:ALLUSERSPROFILE)\Microsoft\Windows\Start Menu\Programs\Startup"
-}
-
-$bat | Out-File "$($startupFolder)\phantomjs.bat" -Encoding "Default" -Force
+$bat | Out-File "$([Environment]::GetFolderPath("Startup"))\phantomjs.bat" -Encoding "Default" -Force
