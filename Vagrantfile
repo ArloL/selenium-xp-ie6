@@ -23,7 +23,7 @@ Vagrant.configure(2) do |config|
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-java.ps1"
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-selenium.ps1"
     m.vm.provision "shell", path: "provision-selenium-hub.ps1"
-    m.vm.provision "shell", inline: "Restart-Computer"
+    m.vm.provision "shell", inline: "Restart-Computer -Force"
   end
 
   config.vm.define "node1" do |m|
@@ -35,7 +35,7 @@ Vagrant.configure(2) do |config|
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-selenium.ps1"
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-iedriverserver.ps1"
     m.vm.provision "shell", path: "provision-selenium-node.ps1", args: ["192.168.205.10", "192.168.205.11"]
-    m.vm.provision "shell", inline: "Restart-Computer"
+    m.vm.provision "shell", inline: "Restart-Computer -Force"
   end
 
   config.vm.define "node2" do |m|
@@ -49,7 +49,7 @@ Vagrant.configure(2) do |config|
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-selenium.ps1"
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-iedriverserver.ps1"
     m.vm.provision "shell", path: "provision-selenium-node.ps1", args: ["192.168.205.10", "192.168.205.12"]
-    m.vm.provision "shell", inline: "Restart-Computer"
+    m.vm.provision "shell", inline: "Restart-Computer -Force"
   end
 
   config.vm.define "node3" do |m|
@@ -61,7 +61,7 @@ Vagrant.configure(2) do |config|
 
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-phantomjs.ps1"
     m.vm.provision "shell", path: "provision-phantomjs-node.ps1", args: ["192.168.205.10", "192.168.205.13"]
-    m.vm.provision "shell", inline: "Restart-Computer"
+    m.vm.provision "shell", inline: "Restart-Computer -Force"
   end
 
 end
