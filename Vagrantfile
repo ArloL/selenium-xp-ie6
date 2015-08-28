@@ -12,9 +12,6 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "provision-timezone.bat"
   config.vm.provision "shell", path: "provision-screensaver.bat"
   config.vm.provision "shell", path: "provision-balloon-tips.bat"
-  config.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-java.ps1"
-  config.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-iedriverserver.ps1"
-  config.vm.provision "shell", path: "provision-selenium.ps1"
 
   config.vm.define "hub" do |m|
     m.vm.hostname = "hub"
@@ -23,8 +20,9 @@ Vagrant.configure(2) do |config|
 
     m.vm.network "private_network", ip: "192.168.205.10"
 
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-java.ps1"
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-selenium.ps1"
     m.vm.provision "shell", path: "provision-selenium-hub.ps1"
-    m.vm.provision "shell", path: "provision-selenium-node.ps1", args: ["192.168.205.10", "192.168.205.10"]
     m.vm.provision "shell", inline: "Restart-Computer"
   end
 
@@ -33,6 +31,9 @@ Vagrant.configure(2) do |config|
 
     m.vm.network "private_network", ip: "192.168.205.11"
 
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-java.ps1"
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-selenium.ps1"
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-iedriverserver.ps1"
     m.vm.provision "shell", path: "provision-selenium-node.ps1", args: ["192.168.205.10", "192.168.205.11"]
     m.vm.provision "shell", inline: "Restart-Computer"
   end
