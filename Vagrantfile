@@ -6,7 +6,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "okeeffe-xp-ie6.box"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.gui = true
+    vb.gui = false
   end
 
   config.vm.provision "shell", path: "provision-timezone.bat"
