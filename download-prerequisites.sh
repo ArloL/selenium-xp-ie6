@@ -22,3 +22,8 @@ if [ ! -f phantomjs-2.0.0-windows.zip ]; then
     wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.0.0-windows.zip
 fi
 shasum --check phantomjs-2.0.0-windows.zip.sha256
+
+if [ ! -f phantomjs-1.9.8-windows.zip ]; then
+    wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-windows.zip
+fi
+shasum --check phantomjs-1.9.8-windows.zip.sha1
