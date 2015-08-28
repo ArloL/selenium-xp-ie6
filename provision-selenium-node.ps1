@@ -2,7 +2,7 @@ param([String]$hubIp, [String]$bindIp)
 
 $bat = @'
 @echo off
-java -jar C:\selenium\selenium-server-standalone-2.47.1.jar -role node -hub http://{hubIp}:4444/grid/register -host {bindIp}
+java -jar C:\opt\selenium-server-standalone-2.47.1.jar -role node -hub http://{hubIp}:4444/grid/register -host {bindIp}
 '@
 
 $bat = $bat.Replace("{hubIp}", $hubIp)

@@ -1,6 +1,6 @@
 $bat = @'
 @echo off
-java -jar C:\selenium\selenium-server-standalone-2.47.1.jar -role hub
+java -jar C:\opt\selenium-server-standalone-2.47.1.jar -role hub
 '@
 
 if (Test-Path "$($env:ALLUSERSPROFILE)\Start Menu\Programs\Startup") {
