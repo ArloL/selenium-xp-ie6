@@ -17,3 +17,8 @@ shasum --check jre-8u60-windows-i586.exe.sha1
 
 wget -c --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" -O jre-8u60-windows-x64.exe http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jre-8u60-windows-x64.exe
 shasum --check jre-8u60-windows-x64.exe.sha1
+
+if [ ! -f phantomjs-2.0.0-windows.zip ]; then
+    wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.0.0-windows.zip
+fi
+shasum --check phantomjs-2.0.0-windows.zip.sha256
