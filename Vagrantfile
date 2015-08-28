@@ -52,4 +52,16 @@ Vagrant.configure(2) do |config|
     m.vm.provision "shell", inline: "Restart-Computer"
   end
 
+  config.vm.define "node3" do |m|
+    m.vm.box = "okeeffe-win81-ie11.box"
+
+    m.vm.hostname = "node3"
+
+    m.vm.network "private_network", ip: "192.168.205.13"
+
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-phantomjs.ps1"
+    m.vm.provision "shell", path: "provision-phantomjs-node.ps1", args: ["192.168.205.10", "192.168.205.13"]
+    m.vm.provision "shell", inline: "Restart-Computer"
+  end
+
 end
