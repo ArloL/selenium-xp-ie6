@@ -1,5 +1,8 @@
-$scriptDir = Split-Path -parent $MyInvocation.MyCommand.Path
+$bat = @'
+@echo off
+java -jar C:\selenium\selenium-server-standalone-2.47.1.jar -role hub
+'@
 
 if (Test-Path "$($env:ALLUSERSPROFILE)\Start Menu\Programs\Startup") {
-    Copy-Item "$($scriptDir)\selenium-hub.bat" "$($env:ALLUSERSPROFILE)\Start Menu\Programs\Startup" -Force
+    $bat | Out-File "$($env:ALLUSERSPROFILE)\Start Menu\Programs\Startup\selenium-hub.bat" -Encoding "Default" -Force
 }
