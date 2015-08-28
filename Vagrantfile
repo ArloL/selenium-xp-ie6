@@ -35,4 +35,13 @@ Vagrant.configure(2) do |config|
     m.vm.provision "shell", inline: "Restart-Computer"
   end
 
+  config.vm.define "node2" do |m|
+    m.vm.hostname = "node2"
+
+    m.vm.network "private_network", ip: "192.168.205.11"
+
+    m.vm.provision "shell", path: "provision-selenium-node.ps1", args: ["192.168.205.10", "192.168.205.11"]
+    m.vm.provision "shell", inline: "Restart-Computer"
+  end
+
 end
