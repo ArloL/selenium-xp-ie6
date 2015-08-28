@@ -39,10 +39,15 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.define "node2" do |m|
+    m.vm.box = "okeeffe-win81-ie11.box"
+
     m.vm.hostname = "node2"
 
     m.vm.network "private_network", ip: "192.168.205.12"
 
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-java.ps1"
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-selenium.ps1"
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-iedriverserver.ps1"
     m.vm.provision "shell", path: "provision-selenium-node.ps1", args: ["192.168.205.10", "192.168.205.12"]
     m.vm.provision "shell", inline: "Restart-Computer"
   end
