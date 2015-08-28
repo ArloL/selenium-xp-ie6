@@ -4,11 +4,13 @@ $scriptDir = Split-Path -parent $MyInvocation.MyCommand.Path
 
 . $scriptDir\Unzip.ps1
 
-Unzip "$($scriptDir)\phantomjs-2.0.0-windows.zip" "C:\" $true
+md C:\opt -Force
+
+Unzip "$($scriptDir)\phantomjs-2.0.0-windows.zip" "C:\opt" $true
 
 $bat = @'
 @echo off
-C:\phantomjs-2.0.0-windows\bin\phantomjs.exe --webdriver=8080 --webdriver-selenium-grid-hub=http://{hubIp}:4444 --ip={bindIp}
+C:\opt\phantomjs-2.0.0-windows\bin\phantomjs.exe --webdriver=8080 --webdriver-selenium-grid-hub=http://{hubIp}:4444 --ip={bindIp}
 '@
 
 $bat = $bat.Replace("{hubIp}", $hubIp)
