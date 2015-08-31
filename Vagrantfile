@@ -45,6 +45,7 @@ Vagrant.configure(2) do |config|
 
     m.vm.network "private_network", ip: "192.168.205.12"
 
+    m.vm.provision "shell", path: "provision-ie11.bat"
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-java.ps1"
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-selenium.ps1"
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-iedriverserver.ps1"
