@@ -27,7 +27,7 @@ Vagrant.configure(2) do |config|
 
     m.vm.network "private_network", ip: "192.168.205.10"
 
-    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-java.ps1"
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-jre.ps1"
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-selenium.ps1"
     m.vm.provision "shell", path: "provision-selenium-hub.ps1"
     m.vm.provision "shell", inline: "shutdown -t 20 -r -f"
@@ -38,7 +38,7 @@ Vagrant.configure(2) do |config|
 
     m.vm.network "private_network", ip: "192.168.205.11"
 
-    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-java.ps1"
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-jre.ps1"
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-selenium.ps1"
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-iedriverserver.ps1"
     m.vm.provision "shell", path: "provision-selenium-node.ps1", args: ["192.168.205.10", "192.168.205.11"]
@@ -53,7 +53,7 @@ Vagrant.configure(2) do |config|
     m.vm.network "private_network", ip: "192.168.205.12"
 
     m.vm.provision "shell", path: "provision-ie11.bat"
-    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-java.ps1"
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-jre.ps1"
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-selenium.ps1"
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-iedriverserver.ps1"
     m.vm.provision "shell", path: "provision-selenium-node.ps1", args: ["192.168.205.10", "192.168.205.12"]
