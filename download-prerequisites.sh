@@ -18,6 +18,12 @@ shasum --check jre-8u72-windows-i586.exe.sha256
 wget --continue --no-cookies --header="Cookie: oraclelicense=accept-securebackup-cookie" --output-document=jre-8u72-windows-x64.exe http://download.oracle.com/otn-pub/java/jdk/8u72-b15/jre-8u72-windows-x64.exe
 shasum --check jre-8u72-windows-x64.exe.sha256
 
+wget --continue --no-cookies --header="Cookie: oraclelicense=accept-securebackup-cookie" --output-document=jre-7u80-windows-i586.exe http://download.oracle.com/otn/java/jdk/7u80-b15/jre-7u80-windows-i586.exe
+md5sum --check jre-7u80-windows-i586.exe.md5
+
+wget --continue --no-cookies --header="Cookie: oraclelicense=accept-securebackup-cookie" --output-document=jre-7u80-windows-x64.exe http://download.oracle.com/otn/java/jdk/7u80-b15/jre-7u80-windows-x64.exe
+md5sum --check jre-7u80-windows-x64.exe.md5
+
 if [ ! -f phantomjs-2.1.1-windows.zip ]; then
     wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-windows.zip
 fi
