@@ -9,9 +9,6 @@ Vagrant.configure(2) do |config|
     vb.gui = false
   end
 
-  config.vm.provision "shell", path: "provision-timezone.bat"
-  config.vm.provision "shell", path: "provision-screensaver.bat"
-  config.vm.provision "shell", path: "provision-balloon-tips.bat"
 
   config.vm.define "hub" do |m|
     m.vm.hostname = "hub"
