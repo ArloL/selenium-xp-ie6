@@ -5,4 +5,4 @@ netsh firewall add allowedprogram program=$java_executable name="Java(TM) Platfo
 
 md C:\opt -Force
 
-Copy-Item "$($scriptDir)\selenium-server-standalone-2.47.1.jar" "C:\opt"
+Copy-Item "$($scriptDir)\selenium-server-standalone-2.49.1.jar" "C:\opt"
