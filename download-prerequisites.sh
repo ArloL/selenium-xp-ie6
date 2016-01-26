@@ -1,7 +1,7 @@
 #!/bin/sh
 
-set -e
-set -x
+set -o errexit
+set -o xtrace
 
 wget -c -N http://selenium-release.storage.googleapis.com/2.47/selenium-server-standalone-2.47.1.jar
 shasum --check selenium-server-standalone-2.47.1.jar.sha1
