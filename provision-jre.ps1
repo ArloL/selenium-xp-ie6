@@ -6,5 +6,5 @@ if ([IntPtr]::size -eq 4) {
 }
 
 if (!(Test-Path "C:\Program Files\Java\jre1.8.0_72")) {
-    Start-Process -FilePath "$($scriptDir)\jre-8u72-windows-$($java_architecture).exe" -ArgumentList "/s","INSTALL_SILENT=1","AUTO_UPDATE=0","WEB_JAVA=1","WEB_ANALYTICS=0","REBOOT=0","NOSTARTMENU=1","SPONSORS=0" -Wait -Passthru
+    Start-Process -FilePath "$($scriptDir)\jre-8u72-windows-$($java_architecture).exe" -ArgumentList "/s","INSTALL_SILENT=1","AUTO_UPDATE=0","WEB_JAVA=1","WEB_ANALYTICS=0","REBOOT=0","NOSTARTMENU=0","SPONSORS=0" -Wait -Passthru
 }
