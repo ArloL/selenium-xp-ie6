@@ -45,8 +45,8 @@ Vagrant.configure(2) do |config|
     m.vm.network "private_network", ip: "192.168.205.10"
 
     m.vm.provision "shell", path: "provision-winxp-timezone.bat"
-    m.vm.provision "shell", path: "provision-winxp-powersettings.bat"
-    m.vm.provision "shell", path: "provision-winxp-proxy.bat"
+    m.vm.provision "shell", path: "provision-winxp-screensaver.bat"
+    m.vm.provision "shell", path: "provision-winxp-balloon-tips.bat"
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-jre.ps1"
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-selenium.ps1"
     m.vm.provision "shell", path: "provision-selenium-hub.ps1"
@@ -61,8 +61,8 @@ Vagrant.configure(2) do |config|
     m.vm.network "private_network", ip: "192.168.205.11"
 
     m.vm.provision "shell", path: "provision-winxp-timezone.bat"
-    m.vm.provision "shell", path: "provision-winxp-powersettings.bat"
-    m.vm.provision "shell", path: "provision-winxp-proxy.bat"
+    m.vm.provision "shell", path: "provision-winxp-screensaver.bat"
+    m.vm.provision "shell", path: "provision-winxp-balloon-tips.bat"
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-jre.ps1"
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-selenium.ps1"
     m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-iedriverserver.ps1"
