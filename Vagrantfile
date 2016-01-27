@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
 
     m.vm.hostname = "win10-edge-jre8u72"
 
-    m.vm.provision "shell", path: "provision-win10-proxy.ps1"
+    m.vm.provision "proxy", type: "shell", path: "provision-win10-proxy.ps1"
     m.vm.provision "shell", path: "provision-bginfo.bat"    
     m.vm.provision "shell", path: "provision-win10-timezone.bat"
     m.vm.provision "shell", path: "provision-win10-powersettings.bat"
@@ -24,7 +24,7 @@ Vagrant.configure(2) do |config|
 
     m.vm.hostname = "win10-edge-jre8u71"
 
-    m.vm.provision "shell", path: "provision-win10-proxy.ps1"
+    m.vm.provision "proxy", type: "shell", path: "provision-win10-proxy.ps1"
     m.vm.provision "shell", path: "provision-bginfo.bat"
     m.vm.provision "shell", path: "provision-win10-timezone.bat"
     m.vm.provision "shell", path: "provision-win10-powersettings.bat"
