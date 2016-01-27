@@ -16,7 +16,7 @@ Vagrant.configure(2) do |config|
     m.vm.provision "shell", path: "provision-bginfo.bat"    
     m.vm.provision "shell", path: "provision-win10-timezone.bat"
     m.vm.provision "shell", path: "provision-win10-powersettings.bat"
-    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-jre8u66.ps1"
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-jre8u71.ps1"
   end
 
   config.vm.define "win10-edge-jre7" do |m|
