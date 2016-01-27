@@ -16,7 +16,7 @@ Vagrant.configure(2) do |config|
     m.vm.provision "shell", path: "provision-bginfo.bat"    
     m.vm.provision "shell", path: "provision-win10-timezone.bat"
     m.vm.provision "shell", path: "provision-win10-powersettings.bat"
-    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-jre8.ps1"
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-jre8u20.ps1"
   end
 
   config.vm.define "win10-edge-jre7" do |m|
@@ -28,7 +28,7 @@ Vagrant.configure(2) do |config|
     m.vm.provision "shell", path: "provision-bginfo.bat"
     m.vm.provision "shell", path: "provision-win10-timezone.bat"
     m.vm.provision "shell", path: "provision-win10-powersettings.bat"
-    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-jre7.ps1"
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-jre7u80.ps1"
   end
 
   config.vm.define "selenium-hub" do |m|
