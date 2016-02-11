@@ -7,10 +7,10 @@ Vagrant.configure(2) do |config|
     vb.gui = false
   end
 
-  config.vm.define "win10-edge-jre8u72" do |m|
+  config.vm.define "win10-edge-jre8u74" do |m|
     m.vm.box = "okeeffe-win10-edge"
 
-    m.vm.hostname = "win10-edge-jre8u72"
+    m.vm.hostname = "win10-edge-jre8u74"
 
     m.vm.provision "shell", path: "provision-win10-proxy-query.ps1"
     m.vm.provision "proxy", type: "shell", path: "provision-win10-proxy.ps1"
@@ -18,13 +18,13 @@ Vagrant.configure(2) do |config|
     m.vm.provision "shell", path: "provision-bginfo.bat"    
     m.vm.provision "shell", path: "provision-win10-timezone.bat"
     m.vm.provision "shell", path: "provision-win10-powersettings.bat"
-    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-jre8u72.ps1"
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-jre8u74.ps1"
   end
 
-  config.vm.define "win10-edge-jre8u71" do |m|
+  config.vm.define "win10-edge-jre8u73" do |m|
     m.vm.box = "okeeffe-win10-edge"
 
-    m.vm.hostname = "win10-edge-jre8u71"
+    m.vm.hostname = "win10-edge-jre8u73"
 
     m.vm.provision "shell", path: "provision-win10-proxy-query.ps1"
     m.vm.provision "proxy", type: "shell", path: "provision-win10-proxy.ps1"
@@ -32,7 +32,7 @@ Vagrant.configure(2) do |config|
     m.vm.provision "shell", path: "provision-bginfo.bat"
     m.vm.provision "shell", path: "provision-win10-timezone.bat"
     m.vm.provision "shell", path: "provision-win10-powersettings.bat"
-    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-jre8u71.ps1"
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-jre8u73.ps1"
   end
 
   config.vm.define "selenium-hub" do |m|
