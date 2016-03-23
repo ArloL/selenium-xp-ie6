@@ -5,6 +5,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provider "virtualbox" do |vb|
     vb.gui = false
+    vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
   end
 
   config.vm.define "win10-edge-jre8u74" do |m|
