@@ -7,15 +7,24 @@ Vagrant.configure(2) do |config|
     vb.gui = false
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
   end
-  
+
+  config.vm.define "win81-ie11" do |m|
+    m.vm.box = "okeeffe-win81-ie11.box"
+  end
+
+  config.vm.define "win10-edge" do |m|
+    m.vm.box = "okeeffe-win10-edge"
+
+    m.vm.provision "shell", path: "provision-win10-proxy.ps1"
+    m.vm.provision "shell", path: "provision-bginfo.bat"    
+    m.vm.provision "shell", path: "provision-win10-timezone.bat"
+    m.vm.provision "shell", path: "provision-win10-powersettings.bat"
+  end
+
   config.vm.define "win10-edge-jre8u77" do |m|
     m.vm.box = "okeeffe-win10-edge"
 
-    m.vm.hostname = "win10-edge-jre8u77"
-
-    m.vm.provision "shell", path: "provision-win10-proxy-query.ps1"
-    m.vm.provision "proxy", type: "shell", path: "provision-win10-proxy.ps1"
-    m.vm.provision "shell", path: "provision-win10-proxy-query.ps1"
+    m.vm.provision "shell", path: "provision-win10-proxy.ps1"
     m.vm.provision "shell", path: "provision-bginfo.bat"    
     m.vm.provision "shell", path: "provision-win10-timezone.bat"
     m.vm.provision "shell", path: "provision-win10-powersettings.bat"
@@ -25,11 +34,7 @@ Vagrant.configure(2) do |config|
   config.vm.define "win10-edge-jre8u74" do |m|
     m.vm.box = "okeeffe-win10-edge"
 
-    m.vm.hostname = "win10-edge-jre8u74"
-
-    m.vm.provision "shell", path: "provision-win10-proxy-query.ps1"
-    m.vm.provision "proxy", type: "shell", path: "provision-win10-proxy.ps1"
-    m.vm.provision "shell", path: "provision-win10-proxy-query.ps1"
+    m.vm.provision "shell", path: "provision-win10-proxy.ps1"
     m.vm.provision "shell", path: "provision-bginfo.bat"    
     m.vm.provision "shell", path: "provision-win10-timezone.bat"
     m.vm.provision "shell", path: "provision-win10-powersettings.bat"
@@ -39,11 +44,7 @@ Vagrant.configure(2) do |config|
   config.vm.define "win10-edge-jre8u73" do |m|
     m.vm.box = "okeeffe-win10-edge"
 
-    m.vm.hostname = "win10-edge-jre8u73"
-
-    m.vm.provision "shell", path: "provision-win10-proxy-query.ps1"
-    m.vm.provision "proxy", type: "shell", path: "provision-win10-proxy.ps1"
-    m.vm.provision "shell", path: "provision-win10-proxy-query.ps1"
+    m.vm.provision "shell", path: "provision-win10-proxy.ps1"
     m.vm.provision "shell", path: "provision-bginfo.bat"
     m.vm.provision "shell", path: "provision-win10-timezone.bat"
     m.vm.provision "shell", path: "provision-win10-powersettings.bat"
