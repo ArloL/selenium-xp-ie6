@@ -7,6 +7,20 @@ Vagrant.configure(2) do |config|
     vb.gui = false
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
   end
+  
+  config.vm.define "win10-edge-jre8u77" do |m|
+    m.vm.box = "okeeffe-win10-edge"
+
+    m.vm.hostname = "win10-edge-jre8u77"
+
+    m.vm.provision "shell", path: "provision-win10-proxy-query.ps1"
+    m.vm.provision "proxy", type: "shell", path: "provision-win10-proxy.ps1"
+    m.vm.provision "shell", path: "provision-win10-proxy-query.ps1"
+    m.vm.provision "shell", path: "provision-bginfo.bat"    
+    m.vm.provision "shell", path: "provision-win10-timezone.bat"
+    m.vm.provision "shell", path: "provision-win10-powersettings.bat"
+    m.vm.provision "shell", inline: "powershell -File C:\\vagrant\\provision-jre8u77.ps1"
+  end
 
   config.vm.define "win10-edge-jre8u74" do |m|
     m.vm.box = "okeeffe-win10-edge"
