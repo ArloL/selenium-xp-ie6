@@ -51,6 +51,8 @@ cd C:\\vagrant
 .\\provision-jre8u101.ps1
 }
 
+  end
+
   config.vm.define "win10-edge-jre8u92" do |m|
     m.vm.box = "okeeffe-win10-edge"
 
