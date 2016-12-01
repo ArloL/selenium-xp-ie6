@@ -14,6 +14,7 @@ Vagrant.configure(2) do |config|
     m.vm.provision "shell", inline: %{
 cd C:\\vagrant
 .\\provision-win10-proxy.ps1
+.\\provision-bginfo.ps1
 .\\provision-win10-timezone.ps1
 .\\provision-win10-powersettings.ps1
 .\\provision-win7-locale.ps1
