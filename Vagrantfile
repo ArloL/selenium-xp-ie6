@@ -8,6 +8,19 @@ Vagrant.configure(2) do |config|
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
   end
 
+  config.vm.define "win7-ie8" do |m|
+    m.vm.box = "evosec-win7-ie8"
+
+    m.vm.provision "shell", inline: %{
+cd C:\\vagrant
+.\\provision-win10-proxy.ps1
+.\\provision-win10-timezone.ps1
+.\\provision-win10-powersettings.ps1
+.\\provision-win7-locale.ps1
+}
+
+  end
+
   config.vm.define "win81-ie11" do |m|
     m.vm.box = "okeeffe-win81-ie11.box"
   end
