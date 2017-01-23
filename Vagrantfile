@@ -39,6 +39,20 @@ cd C:\\vagrant
 
   end
 
+  config.vm.define "win10-edge-jre8u121" do |m|
+    m.vm.box = "okeeffe-win10-edge"
+
+    m.vm.provision "shell", inline: %{
+cd C:\\vagrant
+.\\provision-win10-proxy.ps1
+.\\provision-bginfo.ps1
+.\\provision-win10-timezone.ps1
+.\\provision-win10-powersettings.ps1
+.\\provision-jre8u121.ps1
+}
+
+  end
+
   config.vm.define "win10-edge-jre8u102" do |m|
     m.vm.box = "okeeffe-win10-edge"
 
