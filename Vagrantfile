@@ -23,11 +23,11 @@ cd C:\\vagrant
   end
 
   config.vm.define "win81-ie11" do |m|
-    m.vm.box = "okeeffe-win81-ie11.box"
+    m.vm.box = "evosec-win81-ie11"
   end
 
   config.vm.define "win10-edge" do |m|
-    m.vm.box = "okeeffe-win10-edge"
+    m.vm.box = "evosec-win10-edge"
 
     m.vm.provision "shell", inline: %{
 cd C:\\vagrant
@@ -40,7 +40,7 @@ cd C:\\vagrant
   end
 
   config.vm.define "win10-edge-jre8u121" do |m|
-    m.vm.box = "okeeffe-win10-edge"
+    m.vm.box = "evosec-win10-edge"
 
     m.vm.provision "shell", inline: %{
 cd C:\\vagrant
@@ -54,7 +54,7 @@ cd C:\\vagrant
   end
 
   config.vm.define "win10-edge-jre8u102" do |m|
-    m.vm.box = "okeeffe-win10-edge"
+    m.vm.box = "evosec-win10-edge"
 
     m.vm.provision "shell", inline: %{
 cd C:\\vagrant
@@ -68,7 +68,7 @@ cd C:\\vagrant
   end
 
   config.vm.define "win10-edge-jre8u101" do |m|
-    m.vm.box = "okeeffe-win10-edge"
+    m.vm.box = "evosec-win10-edge"
 
     m.vm.provision "shell", inline: %{
 cd C:\\vagrant
@@ -82,7 +82,7 @@ cd C:\\vagrant
   end
 
   config.vm.define "win10-edge-jre8u92" do |m|
-    m.vm.box = "okeeffe-win10-edge"
+    m.vm.box = "evosec-win10-edge"
 
     m.vm.provision "shell", inline: %{
 cd C:\\vagrant
@@ -96,7 +96,7 @@ cd C:\\vagrant
   end
 
   config.vm.define "win10-edge-jre8u91" do |m|
-    m.vm.box = "okeeffe-win10-edge"
+    m.vm.box = "evosec-win10-edge"
 
     m.vm.provision "shell", inline: %{
 cd C:\\vagrant
@@ -110,7 +110,7 @@ cd C:\\vagrant
   end
 
   config.vm.define "win10-edge-jre8u77" do |m|
-    m.vm.box = "okeeffe-win10-edge"
+    m.vm.box = "evosec-win10-edge"
 
     m.vm.provision "shell", inline: %{
 cd C:\\vagrant
@@ -124,7 +124,7 @@ cd C:\\vagrant
   end
 
   config.vm.define "win10-edge-jre8u74" do |m|
-    m.vm.box = "okeeffe-win10-edge"
+    m.vm.box = "evosec-win10-edge"
 
     m.vm.provision "shell", inline: %{
 cd C:\\vagrant
@@ -138,7 +138,7 @@ cd C:\\vagrant
   end
 
   config.vm.define "win10-edge-jre8u73" do |m|
-    m.vm.box = "okeeffe-win10-edge"
+    m.vm.box = "evosec-win10-edge"
 
     m.vm.provision "shell", inline: %{
 cd C:\\vagrant
@@ -152,7 +152,7 @@ cd C:\\vagrant
   end
 
   config.vm.define "selenium-hub" do |m|
-    m.vm.box = "okeeffe-winxp-ie6"
+    m.vm.box = "evosec-winxp-ie6"
 
     m.vm.hostname = "selenium-hub"
 
@@ -170,7 +170,7 @@ cd C:\\vagrant
   end
 
   config.vm.define "selenium-winxp-ie6" do |m|
-    m.vm.box = "okeeffe-winxp-ie6"
+    m.vm.box = "evosec-winxp-ie6"
 
     m.vm.hostname = "selenium-winxp-ie6"
 
@@ -187,7 +187,7 @@ cd C:\\vagrant
   end
 
   config.vm.define "selenium-win81-ie11" do |m|
-    m.vm.box = "okeeffe-win81-ie11"
+    m.vm.box = "evosec-win81-ie11"
 
     m.vm.hostname = "selenium-win81-ie11"
 
@@ -202,7 +202,7 @@ cd C:\\vagrant
   end
 
   config.vm.define "selenium-phantomjs" do |m|
-    m.vm.box = "okeeffe-win81-ie11"
+    m.vm.box = "evosec-win81-ie11"
 
     m.vm.hostname = "selenium-phantomjs"
 
