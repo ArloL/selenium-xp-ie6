@@ -8,6 +8,8 @@ Vagrant.configure(2) do |config|
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
   end
 
+  config.vm.guest = :windows
+
   config.vm.define "win7-ie8" do |m|
     m.vm.box = "evosec-win7-ie8"
 
