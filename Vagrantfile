@@ -28,6 +28,18 @@ cd C:\\vagrant
     m.vm.box = "evosec-win81-ie11"
   end
 
+  config.vm.define "win81-ie11-jre8u121" do |m|
+    m.vm.box = "evosec-win81-ie11"
+
+    m.vm.provision "shell", inline: %{
+cd C:\\vagrant
+.\\provision-win8-proxy.ps1
+.\\provision-bginfo.ps1
+.\\provision-jre8u121.ps1
+}
+
+  end
+
   config.vm.define "win10-edge" do |m|
     m.vm.box = "evosec-win10-edge"
 
