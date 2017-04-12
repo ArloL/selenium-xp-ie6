@@ -3,6 +3,8 @@
 
 Vagrant.configure(2) do |config|
 
+  config.vm.network "forwarded_port", guest: 3389, host: 3389, host_ip: "localhost", id: "rdp", auto_correct: true
+
   config.vm.provider "virtualbox" do |vb|
     vb.gui = false
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
