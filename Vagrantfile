@@ -22,7 +22,7 @@ cd C:\\vagrant
 .\\provision-win10-timezone.ps1
 .\\provision-win10-powersettings.ps1
 .\\provision-win7-locale.ps1
-.\\provision-jre8u121.ps1
+.\\provision-jre8u.ps1 -version 121
 }
 
   end
@@ -37,7 +37,7 @@ cd C:\\vagrant
 .\\provision-win10-timezone.ps1
 .\\provision-win10-powersettings.ps1
 .\\provision-win7-locale.ps1
-.\\provision-jre8u121.ps1
+.\\provision-jre8u.ps1 -version 121
 }
 
   end
@@ -52,7 +52,7 @@ cd C:\\vagrant
 .\\provision-win10-timezone.ps1
 .\\provision-win10-powersettings.ps1
 .\\provision-win7-locale.ps1
-.\\provision-jre8u121.ps1
+.\\provision-jre8u.ps1 -version 121
 }
 
   end
@@ -67,7 +67,7 @@ cd C:\\vagrant
 .\\provision-win10-timezone.ps1
 .\\provision-win10-powersettings.ps1
 .\\provision-win7-locale.ps1
-.\\provision-jre8u121.ps1
+.\\provision-jre8u.ps1 -version 121
 }
 
   end
@@ -79,7 +79,7 @@ cd C:\\vagrant
 cd C:\\vagrant
 .\\provision-win8-proxy.ps1
 .\\provision-bginfo.ps1
-.\\provision-jre8u121.ps1
+.\\provision-jre8u.ps1 -version 121
 }
 
   end
@@ -93,7 +93,7 @@ cd C:\\vagrant
 .\\provision-bginfo.ps1
 .\\provision-win10-timezone.ps1
 .\\provision-win10-powersettings.ps1
-.\\provision-jre8u121.ps1
+.\\provision-jre8u.ps1 -version 121
 }
 
   end
@@ -107,7 +107,7 @@ cd C:\\vagrant
 .\\provision-bginfo.ps1
 .\\provision-win10-timezone.ps1
 .\\provision-win10-powersettings.ps1
-.\\provision-jre8u121.ps1
+.\\provision-jre8u.ps1 -version 121
 }
 
   end
