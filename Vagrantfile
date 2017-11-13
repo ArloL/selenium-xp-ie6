@@ -22,7 +22,7 @@ cd C:\\vagrant
 .\\provision-timezone.ps1
 .\\provision-powersettings.ps1
 .\\provision-locale.ps1
-.\\provision-jre8u.ps1 -version 121
+.\\provision-jre8u.ps1 -version 151
 }
 
   end
@@ -37,7 +37,7 @@ cd C:\\vagrant
 .\\provision-timezone.ps1
 .\\provision-powersettings.ps1
 .\\provision-locale.ps1
-.\\provision-jre8u.ps1 -version 121
+.\\provision-jre8u.ps1 -version 151
 }
 
   end
@@ -52,7 +52,7 @@ cd C:\\vagrant
 .\\provision-timezone.ps1
 .\\provision-powersettings.ps1
 .\\provision-locale.ps1
-.\\provision-jre8u.ps1 -version 121
+.\\provision-jre8u.ps1 -version 151
 }
 
   end
@@ -67,7 +67,7 @@ cd C:\\vagrant
 .\\provision-timezone.ps1
 .\\provision-powersettings.ps1
 .\\provision-locale.ps1
-.\\provision-jre8u.ps1 -version 121
+.\\provision-jre8u.ps1 -version 151
 }
 
   end
@@ -82,7 +82,7 @@ cd C:\\vagrant
 .\\provision-timezone.ps1
 .\\provision-powersettings.ps1
 .\\provision-locale.ps1
-.\\provision-jre8u.ps1 -version 121
+.\\provision-jre8u.ps1 -version 151
 }
 
   end
@@ -97,7 +97,7 @@ cd C:\\vagrant
 .\\provision-timezone.ps1
 .\\provision-powersettings.ps1
 .\\provision-locale.ps1
-.\\provision-jre8u.ps1 -version 121
+.\\provision-jre8u.ps1 -version 151
 }
 
   end
@@ -112,7 +112,7 @@ cd C:\\vagrant
 .\\provision-timezone.ps1
 .\\provision-powersettings.ps1
 .\\provision-locale.ps1
-.\\provision-jre8u.ps1 -version 121
+.\\provision-jre8u.ps1 -version 151
 }
 
   end
